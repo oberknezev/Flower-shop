@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -7,16 +7,16 @@
     <title>Flower Shop</title>
     <meta name="description" content="Flower shop">
     <meta name="keywords" content="Flower shop, ">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="Vladan Oberknezev">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" sizes="16x16" href="">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossorigin="anonymous">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
@@ -29,78 +29,66 @@
 </header>
 
 <main>
-    <div class="total m-5 text-center">
+    <div class="m-5 text-center fixed-bottom">
         <p>
-            Sadržaj aranžmana. Ukupna cena :
+            <label for="sumTotal">Sadržaj aranžmana. Ukupna cena :</label>
             <input type="number" id="sumTotal" class="text-center" readonly disabled> dinara
         </p>
     </div>
     <section>
         <div class="container">
-            <form action="racun.html">
-                <table class="prime">
+            <form action="checkout.html">
+                <table class="table table-hover">
                     <tbody>
                     <tr>
                         <td class="text-center" id="roses">Ruže</td>
-                        <td><label for="rosesQ">Kolicina</label><br><input type="number" id="rosesQ" min=0 save=""
-                                                                           oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Unesite željenu količinu"
-                                                                           onfocus="this.placeholder = ''" onkeyup="calculate()"></td>
-                        <td><label>Po komadu:</label><br><input type="number" id="rosesPrice" value="180"
-                                                                readonly disabled> rsd</td>
-                        <td><label>Ukupna cena:</label><br><input type="number" id="rosesTotal" readonly
-                                                                  disabled> rsd</td>
+                        <td>
+                            <label for="rosesQ">Kolicina</label><br>
+                            <input type="number" id="rosesQ" min=1 save="" oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Unesite željenu količinu" onfocus="this.placeholder = ''" onkeyup="calculate()">
+                        </td>
+                        <td>
+                            <label for="rosesPrice">Po komadu:</label><br>
+                            <input type="number" id="rosesPrice" value="180" readonly> rsd
+                        </td>
+                        <td>
+                            <label for="rosesTotal">Ukupna cena:</label><br>
+                            <input type="number" id="rosesTotal" readonly> rsd
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center" id="lilies">Ljiljani</td>
-                        <td><label for="liliesQ">Kolicina</label><br><input type="number" id="liliesQ" min=0
-                                                                            save="" oninput="validity.valid ? this.save = value : value = this.save;"
-                                                                            placeholder="Unesite željenu količinu" onfocus="this.placeholder = ''" onkeyup="calculate()"></td>
-                        <td><label>Po komadu:</label><br><input type="number" id="liliesPrice" value="250"
-                                                                readonly disabled> rsd</td>
-                        <td><label>Ukupna cena:</label><br><input type="number" id="liliesTotal" readonly
-                                                                  disabled> rsd</td>
+                        <td>
+                            <label for="liliesQ">Kolicina</label><br>
+                            <input type="number" id="liliesQ" min=1 save="" oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Unesite željenu količinu" onfocus="this.placeholder = ''" onkeyup="calculate()">
+                        </td>
+                        <td>
+                            <label for="liliesPrice">Po komadu:</label><br>
+                            <input type="number" id="liliesPrice" value="250" readonly> rsd
+                        </td>
+                        <td>
+                            <label for="liliesTotal">Ukupna cena:</label><br>
+                            <input type="number" id="liliesTotal" readonly> rsd
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center" id="gerber">Gerberi</td>
-                        <td><label for="gerberQ">Kolicina</label><br><input type="number" id="gerberQ" min=0
-                                                                            save="" oninput="validity.valid ? this.save = value : value = this.save;"
-                                                                            placeholder="Unesite željenu količinu" onfocus="this.placeholder = ''" onkeyup="calculate()"></td>
-                        <td><label>Po komadu:</label><br><input type="number" id="gerberPrice" value="305"
-                                                                readonly disabled> rsd</td>
-                        <td><label>Ukupna cena:</label><br><input type="number" id="gerberTotal" readonly
-                                                                  disabled> rsd</td>
+                        <td>
+                            <label for="gerberQ">Kolicina</label><br>
+                            <input type="number" id="gerberQ" min=1 save="" oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Unesite željenu količinu" onfocus="this.placeholder = ''" onkeyup="calculate()">
+                        </td>
+                        <td>
+                            <label for="gerberPrice">Po komadu:</label><br>
+                            <input type="number" id="gerberPrice" value="305" readonly> rsd
+                        </td>
+                        <td>
+                            <label for="gerberTotal">Ukupna cena:</label><br>
+                            <input type="number" id="gerberTotal" readonly> rsd
+                        </td>
                     </tr>
                     </tbody>
                 </table>
                 <button type="submit" class="mt-5">potvrdi kupovinu</button>
-
             </form>
-            <table class="table table-hover">
-                <tbody>
-                <tr>
-                    <td class="text-center" id="roses">Ruže</td>
-                    <td><label for="rosesQ">Kolicina</label><br><input type="number" id="rosesQ" min=0 save=""
-                                                                       oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Unesite željenu količinu"
-                                                                       onfocus="this.placeholder = ''" onkeyup="calculate()"></td>
-                    <td><label>Po komadu:</label><br><input type="number" id="rosesPrice" value="180"
-                                                            readonly disabled> rsd</td>
-                    <td><label>Ukupna cena:</label><br><input type="number" id="rosesTotal" readonly
-                                                              disabled> rsd</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>@twitter</td>
-                </tr>
-                </tbody>
-            </table>
         </div>
     </section>
 </main>
