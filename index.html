@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Flower Shop</title>
+    <meta name="description" content="Flower shop">
+    <meta name="keywords" content="Flower shop, ">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<header>
+    <h1 class="text-center mt-4">
+        Dobro došli u online cvećaru
+    </h1>
+
+</header>
+
+<main>
+    <div class="total m-5 text-center">
+        <p>
+            Sadržaj aranžmana. Ukupna cena :
+            <input type="number" id="sumTotal" class="text-center" readonly disabled> dinara
+        </p>
+    </div>
+    <section>
+        <div class="container">
+            <form action="racun.html">
+                <table class="prime">
+                    <tbody>
+                    <tr>
+                        <td class="text-center" id="roses">Ruže</td>
+                        <td><label for="rosesQ">Kolicina</label><br><input type="number" id="rosesQ" min=0 save=""
+                                                                           oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Unesite željenu količinu"
+                                                                           onfocus="this.placeholder = ''" onkeyup="calculate()"></td>
+                        <td><label>Po komadu:</label><br><input type="number" id="rosesPrice" value="180"
+                                                                readonly disabled> rsd</td>
+                        <td><label>Ukupna cena:</label><br><input type="number" id="rosesTotal" readonly
+                                                                  disabled> rsd</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" id="lilies">Ljiljani</td>
+                        <td><label for="liliesQ">Kolicina</label><br><input type="number" id="liliesQ" min=0
+                                                                            save="" oninput="validity.valid ? this.save = value : value = this.save;"
+                                                                            placeholder="Unesite željenu količinu" onfocus="this.placeholder = ''" onkeyup="calculate()"></td>
+                        <td><label>Po komadu:</label><br><input type="number" id="liliesPrice" value="250"
+                                                                readonly disabled> rsd</td>
+                        <td><label>Ukupna cena:</label><br><input type="number" id="liliesTotal" readonly
+                                                                  disabled> rsd</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" id="gerber">Gerberi</td>
+                        <td><label for="gerberQ">Kolicina</label><br><input type="number" id="gerberQ" min=0
+                                                                            save="" oninput="validity.valid ? this.save = value : value = this.save;"
+                                                                            placeholder="Unesite željenu količinu" onfocus="this.placeholder = ''" onkeyup="calculate()"></td>
+                        <td><label>Po komadu:</label><br><input type="number" id="gerberPrice" value="305"
+                                                                readonly disabled> rsd</td>
+                        <td><label>Ukupna cena:</label><br><input type="number" id="gerberTotal" readonly
+                                                                  disabled> rsd</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="submit" class="mt-5">potvrdi kupovinu</button>
+
+            </form>
+            <table class="table table-hover">
+                <tbody>
+                <tr>
+                    <td class="text-center" id="roses">Ruže</td>
+                    <td><label for="rosesQ">Kolicina</label><br><input type="number" id="rosesQ" min=0 save=""
+                                                                       oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Unesite željenu količinu"
+                                                                       onfocus="this.placeholder = ''" onkeyup="calculate()"></td>
+                    <td><label>Po komadu:</label><br><input type="number" id="rosesPrice" value="180"
+                                                            readonly disabled> rsd</td>
+                    <td><label>Ukupna cena:</label><br><input type="number" id="rosesTotal" readonly
+                                                              disabled> rsd</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
