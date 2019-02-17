@@ -1,5 +1,48 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+a {
+    position: relative;
+    cursor: pointer;
+}
+a:active {
+    top: 1px;
+}
+a, a:hover, a:visited, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+body {
+    background: url(../images/bg.jpg) no-repeat bottom center fixed;
+    background-size: cover;
+}
+.headerH1 {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+    font-size: 12vw;
+    color: #333;
+}
+table, td {
+    border: 1px solid #000000;
+    border-collapse: separate;
+    text-align: center;
+}
+
+
+.fixedBottom {
+    background-color: #fff3cd;
+}
+
+#btnSubmit {
+    margin-bottom: 60px;
 }

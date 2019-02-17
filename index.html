@@ -8,13 +8,12 @@
     <meta name="description" content="Flower shop">
     <meta name="keywords" content="Flower shop, ">
     <meta name="author" content="Vladan Oberknezev">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" sizes="16x16" href="">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,700,800" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
     <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 
@@ -22,19 +21,13 @@
 
 <body>
 <header>
-    <h1 class="text-center mt-4">
+    <h1 class="text-center headerH1">
         Dobro došli u online cvećaru
     </h1>
-
 </header>
 
 <main>
-    <div class="m-5 text-center fixed-bottom">
-        <p>
-            <label for="sumTotal">Sadržaj aranžmana. Ukupna cena :</label>
-            <input type="number" id="sumTotal" class="text-center" readonly disabled> dinara
-        </p>
-    </div>
+
     <section>
         <div class="container">
             <form action="checkout.html">
@@ -43,11 +36,11 @@
                     <tr>
                         <td class="text-center" id="roses">Ruže</td>
                         <td>
-                            <label for="rosesQ">Kolicina</label><br>
+                            <label for="rosesQ">Količina</label><br>
                             <input type="number" id="rosesQ" min=1 save="" oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Unesite željenu količinu" onfocus="this.placeholder = ''" onkeyup="calculate()">
                         </td>
                         <td>
-                            <label for="rosesPrice">Po komadu:</label><br>
+                            <label for="rosesPrice">Cena po komadu:</label><br>
                             <input type="number" id="rosesPrice" value="180" readonly> rsd
                         </td>
                         <td>
@@ -58,11 +51,11 @@
                     <tr>
                         <td class="text-center" id="lilies">Ljiljani</td>
                         <td>
-                            <label for="liliesQ">Kolicina</label><br>
+                            <label for="liliesQ">Količina</label><br>
                             <input type="number" id="liliesQ" min=1 save="" oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Unesite željenu količinu" onfocus="this.placeholder = ''" onkeyup="calculate()">
                         </td>
                         <td>
-                            <label for="liliesPrice">Po komadu:</label><br>
+                            <label for="liliesPrice">Cena po komadu:</label><br>
                             <input type="number" id="liliesPrice" value="250" readonly> rsd
                         </td>
                         <td>
@@ -73,11 +66,11 @@
                     <tr>
                         <td class="text-center" id="gerber">Gerberi</td>
                         <td>
-                            <label for="gerberQ">Kolicina</label><br>
+                            <label for="gerberQ">Količina</label><br>
                             <input type="number" id="gerberQ" min=1 save="" oninput="validity.valid ? this.save = value : value = this.save;" placeholder="Unesite željenu količinu" onfocus="this.placeholder = ''" onkeyup="calculate()">
                         </td>
                         <td>
-                            <label for="gerberPrice">Po komadu:</label><br>
+                            <label for="gerberPrice">Cena po komadu:</label><br>
                             <input type="number" id="gerberPrice" value="305" readonly> rsd
                         </td>
                         <td>
@@ -87,19 +80,18 @@
                     </tr>
                     </tbody>
                 </table>
-                <button type="submit" class="mt-5">potvrdi kupovinu</button>
+                <div class="fixed-bottom text-center fixedBottom">
+                    <label for="sumTotal">Sadržaj aranžmana. Ukupna cena :</label>
+                    <input type="number" id="sumTotal" class="text-center" readonly> dinara
+                </div>
+                <button type="submit" id="btnSubmit">potvrdi kupovinu</button>
             </form>
         </div>
     </section>
 </main>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
 
 </body>
